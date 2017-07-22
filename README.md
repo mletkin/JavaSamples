@@ -17,5 +17,5 @@ mechanism to control one thread through another.
 The package `org.ully.samples.threads.condition` uses the await/signal mechanism to
 achieve the same result.
 
-## examples for streams and lambdas in Java 8
+## Examples for streams and lambdas in Java 8
 The directory `test/java/java8 contains` sample code for the use of lambdas and streams in Java 8
