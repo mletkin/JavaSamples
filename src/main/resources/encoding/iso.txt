@@ -1,0 +1,4 @@
+iso 8859-1 Line without non-ASCII
+iso-8859-1 aäÄoöÖuüÜssß
+
+EOF
