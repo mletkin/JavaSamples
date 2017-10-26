@@ -18,4 +18,7 @@ The package `org.ully.samples.threads.condition` uses the await/signal mechanism
 achieve the same result.
 
 ## Examples for streams and lambdas in Java 8
-The directory `test/java/java8 contains` sample code for the use of lambdas and streams in Java 8
+The directory `test/java/java8 contains` sample code for the use of lambdas and streams in Java 8.
+
+## Examples for try-with-resources in Java 7
+The directory `test/java/java9` shows how exceptions are handles in a try-with.resources construct.  
