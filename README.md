@@ -2,12 +2,21 @@
 These are some packages with sample code for visualizing single concepts.
 Each packages contains a `xxxSampleApp.java` file with a suitable main method.
 
-## Piped Streams
+## Console with Piped Streams
 The package `org.ully.samples.console` conatains a swing window with two texta areas.
 One acts as a keyboard and one acts as a display. Both are connected to a "machine" object
 which processes data from an InputStream and pipes it to an OutputStream.
 
-It shows the use of piped streams as "plumbing device" to connect input and output steams.
+It shows the use of piped streams as "plumbing device" to connect input and output streams.
+
+## COnsole with reactive API
+The package `org.ully.sample.reactive.console` is the reactive equivalent of the piped console.
+It containes a swing window with three text areas. 
+One acts as a keyboard and the other two act as displays. One display is connected to the keyboard via
+a "machine" object which processes data. The othe display is connected directly to the keyboard and
+shows the raw input.
+
+It shows the use of reactive streams as "plumbing device" to connect input and output streams.
 
 ## UTF-8 and ISO-8859-1 encoded files ##
 The class `org.ully.samples.encoding.Utf8` tries to read ITF-8 and ISO 8859-1 encoded files
