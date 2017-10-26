@@ -9,6 +9,12 @@ which processes data from an InputStream and pipes it to an OutputStream.
 
 It shows the use of piped streams as "plumbing device" to connect input and output steams.
 
+## UTF-8 and ISO-8859-1 encoded files ##
+The class `org.ully.samples.encoding.Utf8` tries to read ITF-8 and ISO 8859-1 encoded files
+with the correct and the wrong encoding and shows the effect.
+The class `org.ully.samples.encoding.TolerantFileReader` is a simple -- ad hoc coded -- sample
+of a file reader, that tries UTF-8 first and switches to ISO 8869-1 on an error.
+
 ## Threads using suspend/resume
 The package `org.ully.samples.threads.legacy` uses the deprecated resume/suspend
 mechanism to control one thread through another.
@@ -18,7 +24,7 @@ The package `org.ully.samples.threads.condition` uses the await/signal mechanism
 achieve the same result.
 
 ## Examples for streams and lambdas in Java 8
-The directory `test/java/java8 contains` sample code for the use of lambdas and streams in Java 8.
+The directory `test/java/java8` contains sample code for the use of lambdas and streams in Java 8.
 
 ## Examples for try-with-resources in Java 7
 The directory `test/java/java9` shows how exceptions are handles in a try-with.resources construct.  
