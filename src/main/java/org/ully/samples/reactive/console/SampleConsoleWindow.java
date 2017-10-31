@@ -9,12 +9,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 
 /**
- * Simple keyboard/display emulator.
+ * Simple swing window as keyboard/display emulator.
  * <ul>
- * <li>The {@link Machine}-Object acts as data processing instance.
+ * <li>The {@link EnrichMachine}-Object acts as data processing instance.
  * <li>The "keyboard" is connected to the machine as input channel
- * <li>The "display1" is connected directly to the machine as output channel
- * <li>The "display2" is connected to the machine as output channel
+ * <li>The "display1" is connected to the machine as output channel
+ * <li>The "display2" shows the "raw" input data
  * </ul>
  */
 public class SampleConsoleWindow {
@@ -26,11 +26,16 @@ public class SampleConsoleWindow {
 
     /**
      * Creates the console window.
+     *
+     * @param title
+     *            totle to display in the the window's title bar
+     * @param machine
+     *            machine to beconnected to in- and output
      */
-    public SampleConsoleWindow() {
-
+    public SampleConsoleWindow(String title, Machine machine) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(800, 600));
+        frame.setTitle(title);
 
         frame.getContentPane().add(//
                 new JSplitPane(JSplitPane.VERTICAL_SPLIT, //
@@ -44,11 +49,11 @@ public class SampleConsoleWindow {
         frame.pack();
         frame.setVisible(true);
 
-        connect(new Machine());
+        connect(machine);
     }
 
     /**
-     * Connect keyboard to machine to displays.
+     * Connects keyboard and display to the machine.
      *
      * @param machine
      */
@@ -64,7 +69,8 @@ public class SampleConsoleWindow {
      * Adds a vertical scrollbar to the component.
      *
      * @param component
-     * @return
+     *            component to embed into the scroll pane
+     * @return ScrollPane with the embedded component
      */
     public JScrollPane mkVerticalScrollPane(JComponent component) {
         return new JScrollPane(component, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,

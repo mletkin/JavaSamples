@@ -4,89 +4,29 @@ import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 
 /**
- * Machine as Character Transformer.
- * <p>
- * connects a publisher to a subscriber and transforms the data sent through.
+ * Interface for a character processing machine with one in- and one out stream.
  */
-public class Machine {
-
-    Publisher<Character> input;
-    Subscriber<Character> output;
-
-    public int ip = 0;
-
-    public void setInput(Publisher<Character> input) {
-        this.input = input;
-    }
-
-    public void setOutput(Subscriber<Character> output) {
-        this.output = output;
-    }
-
-    // Connects input to combined transformer to output.
-    // public void connect() {
-    // Transformer<Character, Character> processor = getPump();
-    // input.subscribe(processor);
-    // processor.subscribe(output);
-    // }
+public interface Machine {
 
     /**
-     * Connects input to transformer chain to output.
-     */
-    public void connect() {
-
-        // input.subscribe(enrich);
-        // enrich.subscribe(sequenz);
-        // sequenz.subscribe(output);
-
-        input.subscribe(enricher().subscribeTo(sequencer().subscribeTo(output)));
-    }
-
-    /**
-     * Creates a Transformer that adds info to the character.
+     * Sets a publisher as input stream.
      *
-     * @return
+     * @param input
+     *            the publisher to read from.
      */
-    private Transformer<Character, String> enricher() {
-        return new Transformer<Character, String>() {
-            @Override
-            protected void pump(Character item) {
-                submit("[" + ip++ + ":" + item + "]");
-            }
-        };
-    }
+    void setInput(Publisher<Character> input);
 
     /**
-     * Creates a Transformer that expands a string to a sequence of characters.
+     * Sets a subscriber as output stream.
      *
-     * @return
+     * @param input
+     *            the publisher to read from.
      */
-    private Transformer<String, Character> sequencer() {
-        return new Transformer<String, Character>() {
-
-            @Override
-            protected void pump(String item) {
-                for (char c : item.toCharArray()) {
-                    submit(c);
-                }
-            }
-        };
-    }
+    void setOutput(Subscriber<Character> output);
 
     /**
-     * Creates a Transformer that combines enricher and sequencer.
-     *
-     * @return
+     * Connects input and output with the machine.
      */
-    private Transformer<Character, Character> getPump() {
-        return new Transformer<Character, Character>() {
-            @Override
-            protected void pump(Character item) {
-                submit('[');
-                submit(item);
-                submit(']');
-            }
-        };
-    }
+    void connect();
 
 }

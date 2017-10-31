@@ -1,17 +1,20 @@
 package org.ully.samples.reactive.console;
 
 /**
- * Run a sample console with reactive key propagation.
+ * Runs different sample console windiws with reactive key propagation.
  */
 public class SampleConsole {
 
     /**
-     * Runs a sample I/O-Console with data processing "machine".
+     * Runs sample I/O-Consoles with different data processing machines.
      *
      * @param args
+     *            command line parameter
      */
     public static void main(String[] args) {
-        new SampleConsoleWindow();
+        new SampleConsoleWindow("Collector", new TransformMachine(new CollectTransformer()));
+        new SampleConsoleWindow("Delay", new TransformMachine(new DelayTransformer<Character>()));
+        new SampleConsoleWindow("Enrich", new EnrichMachine());
     }
 
 }
