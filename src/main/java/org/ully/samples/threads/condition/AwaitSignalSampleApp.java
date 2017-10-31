@@ -3,10 +3,9 @@ package org.ully.samples.threads.condition;
 import java.io.IOException;
 
 /**
- * Sample app to visualize thread control.<br>
+ * Sample app to visualize thread control.
+ * <p>
  * uses the condition mechanism
- *
- * @author Ullrich
  */
 public class AwaitSignalSampleApp {
 

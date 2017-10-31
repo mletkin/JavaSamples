@@ -5,8 +5,6 @@ import org.ully.samples.console.Machine.MachineCallback;
 
 /**
  * Controls the thread for the engine execution
- *
- * @author Ullrich
  */
 public class ThreadControl {
 

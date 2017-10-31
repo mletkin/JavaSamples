@@ -14,8 +14,6 @@ import javax.swing.JSplitPane;
  * <li>The "keyboard" is connected to the ingoing pipe of the machine
  * <li>The "display" is connected to the outgoing pipe of the machine
  * </ul>
- *
- * @author Ullrich
  */
 public class SampleConsoleWindow {
 
@@ -42,7 +40,7 @@ public class SampleConsoleWindow {
         frame.setVisible(true);
     }
 
-    private void mkConsole(Machine maschine ) {
+    private void mkConsole(Machine maschine) {
 
         // connect to keyboard
         PipedInputStream keyboardOut = new PipedInputStream();

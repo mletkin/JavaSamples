@@ -9,8 +9,6 @@ import org.ully.samples.console.Machine.MachineCallback;
 
 /**
  * Run the machine in a separate thread
- *
- * @author Ullrich
  */
 final class MachineThread extends Thread {
 

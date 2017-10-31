@@ -15,8 +15,6 @@ import org.ully.samples.console.PipedConsole;
 
 /**
  * sample for thread debugger.
- *
- * @author Ullrich
  */
 public class SampleThreadWindow {
 

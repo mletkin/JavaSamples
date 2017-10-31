@@ -4,8 +4,6 @@ import java.io.IOException;
 
 /**
  * Run a sample console
- *
- * @author Ullrich
  */
 public class SampleConsole {
 

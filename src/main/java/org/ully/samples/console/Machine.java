@@ -6,8 +6,6 @@ import java.io.OutputStream;
 
 /**
  * Dummy implementation for pipe experiments
- *
- * @author Ullrich
  */
 public class Machine {
 
@@ -39,7 +37,7 @@ public class Machine {
     }
 
     /**
-     * precess incoming data and pour it into the outlet
+     * precess incoming data and pour it into the output
      *
      * @param data
      */
@@ -48,7 +46,7 @@ public class Machine {
     }
 
     /**
-     * precess incoming data and pour it into the outlet
+     * precess incoming data and pour it into the output
      *
      * @param data
      */
@@ -76,7 +74,7 @@ public class Machine {
     }
 
     /**
-     * read a line from the inlet
+     * read a line from the input
      *
      * @return
      * @throws IOException

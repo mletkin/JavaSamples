@@ -25,7 +25,7 @@ import javax.swing.JTextArea;
  *
  * TODO cloese pipe on "close windows"
  *
- * @author Ullrich
+
  */
 public class JKeyboard extends JTextArea {
 

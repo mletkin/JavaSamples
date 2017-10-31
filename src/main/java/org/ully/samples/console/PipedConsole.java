@@ -15,8 +15,6 @@ import org.ully.samples.Util;
 
 /**
  * R/O JTextArea attached to a PipedOutputStream
- *
- * @author Ullrich
  */
 public class PipedConsole extends JTextArea  {
 
