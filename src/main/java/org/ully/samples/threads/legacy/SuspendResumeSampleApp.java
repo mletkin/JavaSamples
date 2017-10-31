@@ -3,10 +3,9 @@ package org.ully.samples.threads.legacy;
 import java.io.IOException;
 
 /**
- * Sample app to visualize thread control.<br>
+ * Sample app to visualize thread control.
+ * <p>
  * uses the deprecated java suspend/resume mechanism
- *
- * @author Ullrich
  */
 public class SuspendResumeSampleApp {
 
@@ -21,3 +20,4 @@ public class SuspendResumeSampleApp {
     }
 
 }
+
