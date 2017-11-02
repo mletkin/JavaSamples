@@ -5,7 +5,7 @@ import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 
 /**
- * Machine, that transforms data using a {@ link Processor}.
+ * Machine, that transforms data using a {@link Processor}.
  * <p>
  * connects a publisher to a subscriber and transforms the data sent through.
  */
@@ -16,7 +16,7 @@ public class TransformMachine implements Machine {
     private Subscriber<Character> output;
 
     /**
-     * Constructs a Machine using the given processor.
+     * Constructs a {@code Machine} using the given processor.
      *
      * @param processor
      *            Prcessor used to transform the data

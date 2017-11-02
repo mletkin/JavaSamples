@@ -7,7 +7,7 @@ import javax.swing.JTextArea;
 import javax.swing.text.DefaultCaret;
 
 /**
- * R/O-JTextArea that displays characters from a subscription.
+ * R/O-JTextArea that displays characters obtained from a subscription.
  */
 public class DisplaySubscriber extends JTextArea implements Subscriber<Character> {
 
@@ -15,7 +15,6 @@ public class DisplaySubscriber extends JTextArea implements Subscriber<Character
 
     public DisplaySubscriber() {
         super(25, 20);
-
         this.setEditable(false);
         this.setLineWrap(true);
         ((DefaultCaret) this.getCaret()).setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);

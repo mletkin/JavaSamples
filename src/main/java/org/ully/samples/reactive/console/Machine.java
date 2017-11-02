@@ -4,7 +4,7 @@ import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 
 /**
- * Interface for a character processing machine with one in- and one out stream.
+ * Interface for a character processing machine with one in- and one outstream.
  */
 public interface Machine {
 

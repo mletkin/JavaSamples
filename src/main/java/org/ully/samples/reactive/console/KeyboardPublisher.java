@@ -12,11 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 /**
- * Text area, that acts as a Keyboard and publishes the input.
+ * JTextArea, that acts as a Keyboard and publishes the input.
  * <ul>
  * <li>keys entered are dispayed in the text area
  * <li>keys entered are published as they are typed
- * <li>control keys (BS, DEL, etc) are forwarded too
+ * <li>control keys (BS, DEL, etc) are published unchanged
  * </ul>
  */
 public class KeyboardPublisher extends JTextArea {
@@ -24,7 +24,7 @@ public class KeyboardPublisher extends JTextArea {
     private SubmissionPublisher<Character> publisher = new SubmissionPublisher<>();
 
     /**
-     * Create the keyboard and connect it to the publisher.
+     * Creates the keyboard and connects it to the publisher.
      *
      * @param frame
      *            owner, needed for the listener
@@ -77,7 +77,7 @@ public class KeyboardPublisher extends JTextArea {
     }
 
     /**
-     * Creates a Listener that closes publisher when the windows closes.
+     * Creates a Listener that closes the publisher when the windows closes.
      *
      * @return
      */

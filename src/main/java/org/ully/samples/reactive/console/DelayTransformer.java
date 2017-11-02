@@ -6,7 +6,7 @@ import java.util.concurrent.Flow.Subscription;
 import java.util.concurrent.SubmissionPublisher;
 
 /**
- * Processor that simulates delayed procession of data (aka "Totzeitglied".
+ * Processor that simulates delayed processing of data.
  *
  * @param <T>
  *            Data type of the data provided by the publisher

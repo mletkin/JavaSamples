@@ -5,6 +5,9 @@ import java.util.concurrent.Flow.Subscriber;
 
 /**
  * Machine, that adds text to each character.
+ * <p>
+ * Shows how to define a sequence of two transformers.<br>
+ * The method getPump creates combined transformer but is not used here.
  */
 public class EnrichMachine implements Machine {
 
@@ -33,13 +36,6 @@ public class EnrichMachine implements Machine {
         this.output = output;
     }
 
-    // Connects input to combined transformer to output.
-    // public void connect() {
-    // Transformer<Character, Character> processor = getPump();
-    // input.subscribe(processor);
-    // processor.subscribe(output);
-    // }
-
     /*
      * (non-Javadoc)
      *
@@ -48,15 +44,15 @@ public class EnrichMachine implements Machine {
     @Override
     public void connect() {
 
-        // input.subscribe(enrich);
-        // enrich.subscribe(sequenz);
         // sequenz.subscribe(output);
+        // enrich.subscribe(sequenz);
+        // input.subscribe(enrich);
 
         input.subscribe(enricher().subscribeTo(sequencer().subscribeTo(output)));
     }
 
     /**
-     * Creates a Transformer that adds info to the character.
+     * Creates a Transformer that adds information to the character.
      *
      * @return
      */

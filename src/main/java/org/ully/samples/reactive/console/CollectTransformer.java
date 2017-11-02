@@ -1,4 +1,4 @@
-    package org.ully.samples.reactive.console;
+package org.ully.samples.reactive.console;
 
 import java.util.Stack;
 import java.util.concurrent.Flow.Processor;
@@ -6,7 +6,7 @@ import java.util.concurrent.Flow.Subscription;
 import java.util.concurrent.SubmissionPublisher;
 
 /**
- * Processor that collect a line of characters and publishes them en block.
+ * Processor that collects a line of characters and publishes them en block (shift register).
  */
 public class CollectTransformer extends SubmissionPublisher<Character> implements Processor<Character, Character> {
 
@@ -28,6 +28,11 @@ public class CollectTransformer extends SubmissionPublisher<Character> implement
         subscription.request(1);
     }
 
+    /**
+     * Publish the buffered data.
+     * <p>
+     * The string collected is published as single characters.
+     */
     private void flush() {
         buffer.stream().forEach(this::submit);
         buffer.clear();
