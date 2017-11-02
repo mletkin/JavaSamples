@@ -40,6 +40,9 @@ public class DelayTransformer<T> extends SubmissionPublisher<T> implements Proce
         subscription.request(10);
     }
 
+    /**
+     * delays execution for a random amount of time.
+     */
     private void delay() {
         try {
             long msec = (long) (Math.random() * MAX_DELAY_IN_MSEC);
