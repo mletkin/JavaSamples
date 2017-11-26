@@ -3,9 +3,6 @@ package org.ully.samples.enums;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import org.ully.samples.enums.AmpelDrei;
-import org.ully.samples.enums.AmpelEins;
-import org.ully.samples.enums.AmpelZwei;
 
 public class AmpelTest {
 
@@ -28,6 +25,13 @@ public class AmpelTest {
         assertEquals("rot", AmpelDrei.ROT.farbe());
         assertEquals("gelb", AmpelDrei.GELB.farbe());
         assertEquals("grün", AmpelDrei.GRUEN.farbe());
+    }
+
+    @Test
+    public void ampelVierTest() {
+        assertEquals("rot", AmpelVier.ROT.farbe());
+        assertEquals("gelb", AmpelVier.GELB.farbe());
+        assertEquals("grün", AmpelVier.GRUEN.farbe());
     }
 
 
