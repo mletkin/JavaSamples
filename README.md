@@ -37,4 +37,8 @@ achieve the same result.
 The directory `test/java/java8` contains sample code for the use of lambdas and streams in Java 8.
 
 ## Examples for try-with-resources in Java 7
-The directory `test/java/java9` shows how exceptions are handles in a try-with.resources construct.  
+The directory `test/java/java9` shows how exceptions are handles in a try-with.resources construct. 
+
+## Multiple inheritance with generics
+The package `org.ully.samples.generics.inheritance` shows how to combine multiple interfaces
+when acccessing an object through generics.
