@@ -15,3 +15,5 @@ die keine Methoden besitzen: AlleRechts, GefahrLinkesUfer und GefahrRechtesUfer.
 In der IDE läßt sich vor jedem Methden-Aufruf ermitteln, welcher Zustand herrscht
 (über den Klassennamen) und welche Bewegungen möglich sind (über die Methoden des
 aktuellen Interfaces).
+
+Ein Beispiel für die Anwendung findet sich in der Klasse Spiel. 
