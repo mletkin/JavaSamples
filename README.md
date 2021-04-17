@@ -42,3 +42,10 @@ The directory `test/java/java9` shows how exceptions are handles in a try-with.r
 ## Multiple inheritance with generics
 The package `org.ully.samples.generics.inheritance` shows how to combine multiple interfaces
 when acccessing an object through generics.
+
+## finit state machine as fluent interface (german language only)
+The package `org.ully.samples.bzkw` is an example of a finit state machine implemented with java interfaces only.
+The sample illustrates that a fluent interface system (as used by assertJ or Mockito) can be represented by
+a finite state machine. States are represented by interfaces, transitions by methods.
+
+The example shows the implementation of a simple logical game "Bauer - Ziege - Kohlkopf - Wolf".
