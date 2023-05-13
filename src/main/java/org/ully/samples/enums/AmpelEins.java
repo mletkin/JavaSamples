@@ -4,7 +4,7 @@ public enum AmpelEins {
 
     ROT("rot"),
     GELB("gelb"),
-    GRUEN("grün"),
+    GRUEN("grÃ¼n"),
     ;
 
     String farbe;

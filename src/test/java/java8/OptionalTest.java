@@ -61,14 +61,14 @@ public class OptionalTest {
 		// Default-Wert direkt angeben
 		assertEquals("bar", Optional.empty().orElse("bar"));
 
-		// Default-Wert über eine Factory-Methode
+		// Default-Wert ueber eine Factory-Methode
 		assertEquals("foo", Optional.empty().orElseGet(() -> "foo"));
 	}
 
 	@Test
 	public void filterTest() {
 
-		// Filter prüft den Inhalt des Optional und liefert ein Optional als Ergebnis
+		// Filter prueft den Inhalt des Optional und liefert ein Optional als Ergebnis
 		Optional<String> x = Optional.of("test");
 		assertEquals("test", x.filter(p -> "test".equals(p)).get());
 
@@ -79,10 +79,10 @@ public class OptionalTest {
 	@Test
 	public void ifPresentTest() {
 
-		// Ist das optional nicht leer, wird die Methode mit dem Inhalt ausgeführt
+		// Ist das Optional nicht leer, wird die Methode mit dem Inhalt ausgefuehrt
 		Optional.of("test").ifPresent(System.out::println);
 
-		// Ist das optional leer, passiet nichts
+		// Ist das Optional leer, passiert nichts
 		Optional.empty().ifPresent(System.out::println);
 	}
 
@@ -91,7 +91,7 @@ public class OptionalTest {
 
 		Optional<String> x = Optional.of(" test ");
 
-		// map führt das Lambda auf dem Inhalt aus und liefert ein neues Optional
+		// map fuehrt das Lambda auf dem Inhalt aus und liefert ein neues Optional
 		assertEquals(Integer.valueOf(6), x.map(String::length).get());
 
 		// map kann (wie filter) verkettet werden

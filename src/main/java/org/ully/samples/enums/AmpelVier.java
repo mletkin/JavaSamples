@@ -11,7 +11,7 @@ public enum AmpelVier {
         switch (this) {
         case ROT:   return "rot";
         case GELB:  return "gelb";
-        case GRUEN: return "grün";
+        case GRUEN: return "grÃ¼n";
         default: throw new IllegalStateException();
         }
     };

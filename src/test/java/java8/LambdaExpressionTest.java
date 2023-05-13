@@ -14,20 +14,20 @@ public class LambdaExpressionTest {
 	@Test
 	public void applyLambda() {
 
-		// Lambda expressions werden durch Objekte repräsentiert und müssen daher functional Interfaces implementieren
+		// Lambda expressions werden durch Objekte repraesentiert und muessen daher functional Interfaces implementieren
 		// Function-JavaDoc: Conceptually, a functional interface has exactly one abstract method.
 		// Die Annotation selbst ist dabei nicht erforderlich.
-		// Die Auswertung erfolgt über die definierte Methode
+		// Die Auswertung erfolgt ueber die definierte Methode
 
 		// Function String -> String
 		Function<String, String> lambda = (p) -> "Test " + p;
 		System.out.println(lambda.apply("1"));
 
-		// Funktion ohne Rückgabewert
+		// Funktion ohne Rueckgabewert
 		Consumer<String> my = (s) -> System.out.println(s);
 		my.accept("Test 2");
 
-		// Funktion ohne Parameter (mit Rückgabewert)
+		// Funktion ohne Parameter (mit Rueckgabewert)
 		Supplier<String> ny = () -> "Test 3";
 		System.out.println(ny.get());
 	}
@@ -72,20 +72,20 @@ public class LambdaExpressionTest {
 		// mehrere Paremeter (immer mit Klammern, ENTWEDER deklarieret ODER abgeleitet)
 		// (int a, int b) -> a+b
 
-		// Var-Arg geht auch (... und [] sind äquivalent)
+		// Var-Arg geht auch (... und [] sind aequivalent)
 		// (int... x) -> ..
 		// (int[] x) -> ..
 	}
 
 	@Test
 	public void methodReferences() {
-		// static reference: Statische Methode die den Wert als Argument übernimmt
+		// static reference: Statische Methode die den Wert als Argument uebernimmt
 		System.out.println(executeString(LambdaExpressionTest::staticDuplicate, "1"));
 
-		// bound instance reference: Methode mit Angabe eines Objektes die den Wert als Argument übernimmt
+		// bound instance reference: Methode mit Angabe eines Objektes die den Wert als Argument uebernimmt
 		System.out.println(executeString(this::duplicate, "2"));
 
-		// unbound instance regerence: Die Methode wird auf den Parameter angewandt! Wichtig für Streams
+		// unbound instance regerence: Die Methode wird auf den Parameter angewandt! Wichtig fuer Streams
 		System.out.println(executeString(String::trim, " test 3 "));
 	}
 
@@ -100,19 +100,19 @@ public class LambdaExpressionTest {
 	@Test
 	public void useContext() {
 
-		// (effektiv) finale Werte aus dem Kontext können im Lambda verwendet werden
+		// (effektiv) finale Werte aus dem Kontext koennen im Lambda verwendet werden
 		String context = "test";
 		System.out.println(execute(p -> context + " " + p, "1"));
 		// context = "foo"; // geht nicht!
 
-		// Über eine Lambda-Factory-Method "inject" kann der Kontext injiziert werden (Currying)
+		// ï¿½ber eine Lambda-Factory-Method "inject" kann der Kontext injiziert werden (Currying)
 		System.out.println(execute(inject("first"), "2"));
 		System.out.println(execute(inject("next"), "3"));
 	}
 
 	private Function<String, String> inject(final String context) {
 		// Der Parameter ist final und konfiguriert so das Lambda mit einem Parameter
-		// Das Argument ist statisch und kann über Kontext-Änderung nicht variiert werden
+		// Das Argument ist statisch und kann ueber Kontext-Aenderung nicht variiert werden
 		return p -> context + " " + p;
 	}
 
@@ -124,7 +124,7 @@ public class LambdaExpressionTest {
 		System.out.println(execute(fkt, "1"));
 		// foo = new Foo(); // geht nicht!
 
-		// Änderung des Context zieht Änderung des Lambdas nach sich
+		// Aenderung des Context zieht Aenderung des Lambdas nach sich
 		// foo ist zwar immutable, aber nicht der Inhalt
 		foo.value = "changed";
 		System.out.println(execute(fkt, "1"));

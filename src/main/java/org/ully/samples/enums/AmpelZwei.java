@@ -4,7 +4,7 @@ public enum AmpelZwei {
 
     ROT   {{farbe = "rot";}} ,
     GELB  {{farbe = "gelb";}} ,
-    GRUEN {{farbe = "grün";}};
+    GRUEN {{farbe = "grÃ¼n";}};
 
     String farbe;
 
