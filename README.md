@@ -49,3 +49,8 @@ The sample illustrates that a fluent interface system (as used by assertJ or Moc
 a finite state machine. States are represented by interfaces, transitions by methods.
 
 The example shows the implementation of a simple logical game "Bauer - Ziege - Kohlkopf - Wolf".
+
+## n-adic Tree
+The package `org.ully.samples.tree` contains the implementation of an n-adic tree with generic types for the edge identifier and the node data.
+It demonstrates addition and search by specifying the node through a list of edge identifiers.
+It uses a recursive data structure and linear algorithms which are more efficient than resursive algorithms.
