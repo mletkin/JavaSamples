@@ -19,6 +19,12 @@ The other display is connected directly to the keyboard and shows the raw input.
 It shows the use of reactive streams as "plumbing device" to connect input and output streams
 in an asynchronous way.
 
+## Flyweight Implementations with Java 17
+The classes in `org.mletkin.samples.flyweight` try different implementations for the flyweight pattern.
+The implementations are motivated by th emapping of integer database fields to enum instances.
+The use of records and interafces tries to make it possible to wrap "invalid" integer values.
+Java enums alone cannot do this.
+
 ## UTF-8 and ISO-8859-1 encoded files ##
 The class `org.mletkin.samples.encoding.Utf8` tries to read ITF-8 and ISO 8859-1 encoded files
 with the correct and the wrong encoding and shows the effect.
